@@ -2,7 +2,7 @@
   <img src="../images/LogoplutoTv.jpg" alt="Logo plutoTV" width="300" height="auto">
 </div>
 
-# Índice
+# Índice.
 1. [Identificación de Modelo de Negocio](#identificación-de-modelo-de-negocio)
 2. [Modelo de Negocio](#modelo-de-negocio)
 3. [Estrategia de Contenido](#estrategia-de-contenido)
@@ -13,7 +13,7 @@
 
 ---
 
-## Identificación de Modelo de Negocio
+## Identificación de Modelo de Negocio.
 
 El modelo de negocio de Pluto TV se basa principalmente en el modelo **AVOD** (Advertising Video on Demand). A diferencia de las plataformas de suscripción como Netflix o Amazon Prime Video, Pluto TV ofrece contenido gratuito apoyado por anuncios publicitarios. Algunas de las características clave del modelo de negocio incluyen:
 
@@ -23,7 +23,7 @@ El modelo de negocio de Pluto TV se basa principalmente en el modelo **AVOD** (A
 
 ---
 
-## Modelo de Negocio
+## Modelo de Negocio.
 
 | **Fuente de Ingresos** | **Descripción** | **Fecha de Implementación** |
 |------------------------|-----------------|-----------------------------|
@@ -33,7 +33,7 @@ El modelo de negocio de Pluto TV se basa principalmente en el modelo **AVOD** (A
 
 ---
 
-## Estrategia de Contenido
+## Estrategia de Contenido.
 
 | **Tipo de Contenido**   | **Descripción** | **Fecha de Expansión** |
 |------------------------|-----------------|------------------------|
@@ -43,7 +43,7 @@ El modelo de negocio de Pluto TV se basa principalmente en el modelo **AVOD** (A
 
 ---
 
-## Público Objetivo
+## Público Objetivo.
 
 El público objetivo de Pluto TV se caracteriza por:
 
@@ -52,7 +52,7 @@ El público objetivo de Pluto TV se caracteriza por:
 
 ---
 
-## Competencia y Diferenciación
+## Competencia y Diferenciación.
 
 | **Competidor**         | **Diferenciador de Pluto TV** | **Fecha de Competencia Directa** |
 |------------------------|------------------------------|----------------------------------|
@@ -61,12 +61,12 @@ El público objetivo de Pluto TV se caracteriza por:
 
 ---
 
-## Presencia en Argentina
+## Presencia en Argentina.
 
 Pluto TV ha tenido un crecimiento destacado en Argentina, el país con mayor número de plataformas OTT en América Latina, lo que le ha permitido competir de manera significativa en un mercado altamente competitivo. El contenido local e internacional accesible gratuitamente también le da una ventaja en un mercado que valora la accesibilidad y la variedad de contenido.
 
 ---
 
-## Conclusión
+## Conclusión.
 
 El modelo de negocio de Pluto TV se basa en publicidad, licencias de contenido y alianzas con marcas. Su estrategia combina TV en vivo con contenido bajo demanda, lo que lo diferencia en un mercado competitivo, especialmente en regiones como América Latina donde el acceso gratuito a contenido es altamente valorado. La plataforma continuará creciendo en la medida que amplía su catálogo y mejora su tecnología publicitaria, adaptándose a los cambios en las preferencias de los usuarios y anunciantes.
