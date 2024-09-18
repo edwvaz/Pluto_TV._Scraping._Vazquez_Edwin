@@ -9,38 +9,10 @@ url1 = "https://service-media-catalog.clusters.pluto.tv/v1/main-categories?inclu
 url2 = "https://service-channels.clusters.pluto.tv/v2/guide/channels?channelIds=&offset=0&limit=1000&sort=number%3Aasc"
 
 # Definir los headers para la primera API de LiveTV (categorías)
-headers1 = {
-    "accept": "*/*",
-    "accept-encoding": "gzip, deflate, br, zstd",
-    "accept-language": "es-419,es;q=0.9",
-    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjRlMDUzMjYyLWQ5YWYtNDFlZS1iOWUyLTBiNDU0MDliOTkxOSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI5YWFhMmIxZC03MWNjLTExZWYtOWRlYS01NjA0ODI5NDZlYTUiLCJjbGllbnRJUCI6IjE2My4xMC4zNi40IiwiY2l0eSI6IkxhIFBsYXRhIiwicG9zdGFsQ29kZSI6ImIxOTA2IGZkYSIsImNvdW50cnkiOiJBUiIsImRtYSI6MCwiYWN0aXZlUmVnaW9uIjoiVkUiLCJkZXZpY2VMYXQiOi0zNC45MzAwMDAzMDUxNzU3OCwiZGV2aWNlTG9uIjotNTcuOTU5OTk5MDg0NDcyNjU2LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVzIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjguMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjQuMC05Y2E1MWNhMTBjMzA0N2ZiYWZhNzI5NzcwOGYxNDYyNDMxNDZkMTI1IiwiY2xpZW50SUQiOiI5MDEwZWQ0Mi00N2FkLTQ5MGItYmI3MC1iYjczNDk1MTQxODciLCJjbUF1ZGllbmNlSUQiOiIiLCJpc0NsaWVudEROVCI6ZmFsc2UsInVzZXJJRCI6IjY2ZGI1OGQ1ZjVkMGY4ODY3YzFkZTBkZCIsInVzZXJCcmFuZCI6InBsdXRvdHYiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvQXJnZW50aW5hL0J1ZW5vc19BaXJlcyIsInNlcnZlclNpZGVBZHMiOmZhbHNlLCJlMmVCZWFjb25zIjpmYWxzZSwiZmVhdHVyZXMiOnsibXVsdGlQb2RBZHMiOnsiZW5hYmxlZCI6dHJ1ZX19LCJlbnRpdGxlbWVudHMiOlsiUmVnaXN0ZXJlZCJdLCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6ImYyZTk0OWNlM2Q1OWIwZTE0YWFjODUxMTQyODYzODQ5NDk3ZjAzNGI4YjJjZjg3OGYwMGEyNGM3Zjg1ODI4YzMiLCJmd1ZjSUQyQ29wcGEiOiI5MDEwZWQ0Mi00N2FkLTQ5MGItYmI3MC1iYjczNDk1MTQxODciLCJjdXN0b21QYXJhbXMiOnsiZm1zX2xpdmVyYW1wX2lkbCI6IiIsImZtc19lbWFpbGhhc2giOiJmMmU5NDljZTNkNTliMGUxNGFhYzg1MTE0Mjg2Mzg0OTQ5N2YwMzRiOGIyY2Y4NzhmMDBhMjRjN2Y4NTgyOGMzIiwiZm1zX3N1YnNjcmliZXJpZCI6IjY2ZGI1OGQ1ZjVkMGY4ODY3YzFkZTBkZCIsImZtc19pZmEiOiIiLCJmbXNfaWRmdiI6IiIsImZtc191c2VyaWQiOiI5MDEwZWQ0Mi00N2FkLTQ5MGItYmI3MC1iYjczNDk1MTQxODciLCJmbXNfdmNpZDJ0eXBlIjoiZW1haWxoYXNoIiwiZm1zX3JhbXBfaWQiOiIiLCJmbXNfaGhfcmFtcF9pZCI6IiIsImZtc19iaWRpZHR5cGUiOiIiLCJfZndfM1BfVUlEIjoiIiwiZm1zX3J1bGVpZCI6IjEwMDAwLDEwMDAzIn19LCJkcm0iOnsibmFtZSI6IndpZGV2aW5lIiwibGV2ZWwiOiJMMyJ9LCJpc3MiOiJib290LnBsdXRvLnR2Iiwic3ViIjoicHJpOnYxOnBsdXRvOnVzZXJzLXYxOlZFOk9UQXhNR1ZrTkRJdE5EZGhaQzAwT1RCaUxXSmlOekF0WW1JM016UTVOVEUwTVRnMzo2NmRiNThkNWY1ZDBmODg2N2MxZGUwZGQiLCJhdWQiOiIqLnBsdXRvLnR2IiwiZXhwIjoxNzI2MzE3MzA2LCJpYXQiOjE3MjYyMzA5MDYsImp0aSI6IjVmMWExZmRlLTIyZmMtNDM1NC04NGY1LTdjYjhjNTNiZTA0YiJ9.IM8AcfF0hNcPdLOZBhCHEOziOF-k1s5xL5nfPhCMpXM",
-    "origin": "https://pluto.tv",
-    "referer": "https://pluto.tv/",
-    "sec-ch-ua": '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": '"Windows"',
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-site",
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
-}
+headers1 = {}
 
 # Definir los headers para la segunda API de LiveTV (canales)
-headers2 = {
-    "accept": "*/*",
-    "accept-encoding": "gzip, deflate, br, zstd",
-    "accept-language": "es-419,es;q=0.9",
-    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjRlMDUzMjYyLWQ5YWYtNDFlZS1iOWUyLTBiNDU0MDliOTkxOSIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI5YWFhMmIxZC03MWNjLTExZWYtOWRlYS01NjA0ODI5NDZlYTUiLCJjbGllbnRJUCI6IjE2My4xMC4zNi40IiwiY2l0eSI6IkxhIFBsYXRhIiwicG9zdGFsQ29kZSI6ImIxOTA2IGZkYSIsImNvdW50cnkiOiJBUiIsImRtYSI6MCwiYWN0aXZlUmVnaW9uIjoiVkUiLCJkZXZpY2VMYXQiOi0zNC45MzAwMDAzMDUxNzU3OCwiZGV2aWNlTG9uIjotNTcuOTU5OTk5MDg0NDcyNjU2LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVzIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjguMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjQuMC05Y2E1MWNhMTBjMzA0N2ZiYWZhNzI5NzcwOGYxNDYyNDMxNDZkMTI1IiwiY2xpZW50SUQiOiI5MDEwZWQ0Mi00N2FkLTQ5MGItYmI3MC1iYjczNDk1MTQxODciLCJjbUF1ZGllbmNlSUQiOiIiLCJpc0NsaWVudEROVCI6ZmFsc2UsInVzZXJJRCI6IjY2ZGI1OGQ1ZjVkMGY4ODY3YzFkZTBkZCIsInVzZXJCcmFuZCI6InBsdXRvdHYiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvQXJnZW50aW5hL0J1ZW5vc19BaXJlcyIsInNlcnZlclNpZGVBZHMiOmZhbHNlLCJlMmVCZWFjb25zIjpmYWxzZSwiZmVhdHVyZXMiOnsibXVsdGlQb2RBZHMiOnsiZW5hYmxlZCI6dHJ1ZX19LCJlbnRpdGxlbWVudHMiOlsiUmVnaXN0ZXJlZCJdLCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6ImYyZTk0OWNlM2Q1OWIwZTE0YWFjODUxMTQyODYzODQ5NDk3ZjAzNGI4YjJjZjg3OGYwMGEyNGM3Zjg1ODI4YzMiLCJmd1ZjSUQyQ29wcGEiOiI5MDEwZWQ0Mi00N2FkLTQ5MGItYmI3MC1iYjczNDk1MTQxODciLCJjdXN0b21QYXJhbXMiOnsiZm1zX2xpdmVyYW1wX2lkbCI6IiIsImZtc19lbWFpbGhhc2giOiJmMmU5NDljZTNkNTliMGUxNGFhYzg1MTE0Mjg2Mzg0OTQ5N2YwMzRiOGIyY2Y4NzhmMDBhMjRjN2Y4NTgyOGMzIiwiZm1zX3N1YnNjcmliZXJpZCI6IjY2ZGI1OGQ1ZjVkMGY4ODY3YzFkZTBkZCIsImZtc19pZmEiOiIiLCJmbXNfaWRmdiI6IiIsImZtc191c2VyaWQiOiI5MDEwZWQ0Mi00N2FkLTQ5MGItYmI3MC1iYjczNDk1MTQxODciLCJmbXNfdmNpZDJ0eXBlIjoiZW1haWxoYXNoIiwiZm1zX3JhbXBfaWQiOiIiLCJmbXNfaGhfcmFtcF9pZCI6IiIsImZtc19iaWRpZHR5cGUiOiIiLCJfZndfM1BfVUlEIjoiIiwiZm1zX3J1bGVpZCI6IjEwMDAwLDEwMDAzIn19LCJkcm0iOnsibmFtZSI6IndpZGV2aW5lIiwibGV2ZWwiOiJMMyJ9LCJpc3MiOiJib290LnBsdXRvLnR2Iiwic3ViIjoicHJpOnYxOnBsdXRvOnVzZXJzLXYxOlZFOk9UQXhNR1ZrTkRJdE5EZGhaQzAwT1RCaUxXSmlOekF0WW1JM016UTVOVEUwTVRnMzo2NmRiNThkNWY1ZDBmODg2N2MxZGUwZGQiLCJhdWQiOiIqLnBsdXRvLnR2IiwiZXhwIjoxNzI2MzE3MzA2LCJpYXQiOjE3MjYyMzA5MDYsImp0aSI6IjVmMWExZmRlLTIyZmMtNDM1NC04NGY1LTdjYjhjNTNiZTA0YiJ9.IM8AcfF0hNcPdLOZBhCHEOziOF-k1s5xL5nfPhCMpXM",
-    "origin": "https://pluto.tv",
-    "referer": "https://pluto.tv/",
-    "sec-ch-ua": '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": '"Windows"',
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-site",
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
-}
+headers2 = {}
 
 # Medir el tiempo de inicio
 start_time_total = time.time()
@@ -109,21 +81,7 @@ def extraer_año_de_slug(slug):
 # Función para obtener las películas y series de una subcategoría
 def obtener_movies_y_series(sub_category_id):
     urlondemand = f"https://service-vod.clusters.pluto.tv/v4/vod/categories/{sub_category_id}/items?offset=30&page=1"
-    headers_ondemand = {
-    "accept": "*/*",
-    "accept-encoding": "gzip, deflate, br, zstd",
-    "accept-language": "es-419,es;q=0.9",
-    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjFkODRkYzg4LTcxMWItNDBkNi1hN2M4LTRlZTFjOTY4YTE5YiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiJlYzMyYTZjZS03MTMzLTExZWYtOGM0OC1lYTM1MmM1Y2ZiZjMiLCJjbGllbnRJUCI6IjE2My4xMC4zNi40IiwiY2l0eSI6IkxhIFBsYXRhIiwicG9zdGFsQ29kZSI6ImIxOTA2IGZkYSIsImNvdW50cnkiOiJBUiIsImRtYSI6MCwiYWN0aXZlUmVnaW9uIjoiVkUiLCJkZXZpY2VMYXQiOi0zNC45MzAwMDAzMDUxNzU3OCwiZGV2aWNlTG9uIjotNTcuOTU5OTk5MDg0NDcyNjU2LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVzIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjguMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjQuMC05Y2E1MWNhMTBjMzA0N2ZiYWZhNzI5NzcwOGYxNDYyNDMxNDZkMTI1IiwiY2xpZW50SUQiOiI5MDEwZWQ0Mi00N2FkLTQ5MGItYmI3MC1iYjczNDk1MTQxODciLCJjbUF1ZGllbmNlSUQiOiIiLCJpc0NsaWVudEROVCI6ZmFsc2UsInVzZXJJRCI6IjY2ZGI1OGQ1ZjVkMGY4ODY3YzFkZTBkZCIsInVzZXJCcmFuZCI6InBsdXRvdHYiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvQXJnZW50aW5hL0J1ZW5vc19BaXJlcyIsInNlcnZlclNpZGVBZHMiOmZhbHNlLCJlMmVCZWFjb25zIjpmYWxzZSwiZmVhdHVyZXMiOnsibXVsdGlQb2RBZHMiOnsiZW5hYmxlZCI6dHJ1ZX19LCJlbnRpdGxlbWVudHMiOlsiUmVnaXN0ZXJlZCJdLCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6ImYyZTk0OWNlM2Q1OWIwZTE0YWFjODUxMTQyODYzODQ5NDk3ZjAzNGI4YjJjZjg3OGYwMGEyNGM3Zjg1ODI4YzMiLCJmd1ZjSUQyQ29wcGEiOiI5MDEwZWQ0Mi00N2FkLTQ5MGItYmI3MC1iYjczNDk1MTQxODciLCJjdXN0b21QYXJhbXMiOnsiZm1zX2xpdmVyYW1wX2lkbCI6IiIsImZtc19lbWFpbGhhc2giOiJmMmU5NDljZTNkNTliMGUxNGFhYzg1MTE0Mjg2Mzg0OTQ5N2YwMzRiOGIyY2Y4NzhmMDBhMjRjN2Y4NTgyOGMzIiwiZm1zX3N1YnNjcmliZXJpZCI6IjY2ZGI1OGQ1ZjVkMGY4ODY3YzFkZTBkZCIsImZtc19pZmEiOiIiLCJmbXNfaWRmdiI6IiIsImZtc191c2VyaWQiOiI5MDEwZWQ0Mi00N2FkLTQ5MGItYmI3MC1iYjczNDk1MTQxODciLCJmbXNfdmNpZDJ0eXBlIjoiZW1haWxoYXNoIiwiZm1zX3JhbXBfaWQiOiIiLCJmbXNfaGhfcmFtcF9pZCI6IiIsImZtc19iaWRpZHR5cGUiOiIiLCJfZndfM1BfVUlEIjoiIiwiZm1zX3J1bGVpZCI6IjEwMDAwLDEwMDAzIn19LCJkcm0iOnsibmFtZSI6IndpZGV2aW5lIiwibGV2ZWwiOiJMMyJ9LCJpc3MiOiJib290LnBsdXRvLnR2Iiwic3ViIjoicHJpOnYxOnBsdXRvOnVzZXJzLXYxOlZFOk9UQXhNR1ZrTkRJdE5EZGhaQzAwT1RCaUxXSmlOekF0WW1JM016UTVOVEUwTVRnMzo2NmRiNThkNWY1ZDBmODg2N2MxZGUwZGQiLCJhdWQiOiIqLnBsdXRvLnR2IiwiZXhwIjoxNzI2MjUxNzMwLCJpYXQiOjE3MjYxNjUzMzAsImp0aSI6IjAxYjA1YjRmLTQ1YTMtNDI2Yi1iZjE1LTY5ODE2YmZiYjRkZCJ9.39rl2XvMQ_a-IvRKN-QimoS7aJVyhnX6R1LR2zu_j6o",
-    "origin": "https://pluto.tv",
-    "referer": "https://pluto.tv/",
-    "sec-ch-ua": '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": '"Windows"',
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-site",
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
-}
+    headers_ondemand = {}
     response = requests.get(urlondemand, headers=headers_ondemand)
     movieseries = []
     if response.status_code == 200:
@@ -166,38 +124,10 @@ url_main_categories = "https://service-media-catalog.clusters.pluto.tv/v1/main-c
 url_sub_categories = "https://service-vod.clusters.pluto.tv/v4/vod/categories?includeItems=false&includeCategoryFields=iconSvg&offset=1000&page=1&sort=number%3Aasc"
 
 # Headers para la API de categorías principales
-headers_main_categories = {
-    "accept": "*/*",
-    "accept-encoding": "gzip, deflate, br, zstd",
-    "accept-language": "es-419,es;q=0.9",
-    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjFkODRkYzg4LTcxMWItNDBkNi1hN2M4LTRlZTFjOTY4YTE5YiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiJlYzMyYTZjZS03MTMzLTExZWYtOGM0OC1lYTM1MmM1Y2ZiZjMiLCJjbGllbnRJUCI6IjE2My4xMC4zNi40IiwiY2l0eSI6IkxhIFBsYXRhIiwicG9zdGFsQ29kZSI6ImIxOTA2IGZkYSIsImNvdW50cnkiOiJBUiIsImRtYSI6MCwiYWN0aXZlUmVnaW9uIjoiVkUiLCJkZXZpY2VMYXQiOi0zNC45MzAwMDAzMDUxNzU3OCwiZGV2aWNlTG9uIjotNTcuOTU5OTk5MDg0NDcyNjU2LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVzIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjguMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjQuMC05Y2E1MWNhMTBjMzA0N2ZiYWZhNzI5NzcwOGYxNDYyNDMxNDZkMTI1IiwiY2xpZW50SUQiOiI5MDEwZWQ0Mi00N2FkLTQ5MGItYmI3MC1iYjczNDk1MTQxODciLCJjbUF1ZGllbmNlSUQiOiIiLCJpc0NsaWVudEROVCI6ZmFsc2UsInVzZXJJRCI6IjY2ZGI1OGQ1ZjVkMGY4ODY3YzFkZTBkZCIsInVzZXJCcmFuZCI6InBsdXRvdHYiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvQXJnZW50aW5hL0J1ZW5vc19BaXJlcyIsInNlcnZlclNpZGVBZHMiOmZhbHNlLCJlMmVCZWFjb25zIjpmYWxzZSwiZmVhdHVyZXMiOnsibXVsdGlQb2RBZHMiOnsiZW5hYmxlZCI6dHJ1ZX19LCJlbnRpdGxlbWVudHMiOlsiUmVnaXN0ZXJlZCJdLCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6ImYyZTk0OWNlM2Q1OWIwZTE0YWFjODUxMTQyODYzODQ5NDk3ZjAzNGI4YjJjZjg3OGYwMGEyNGM3Zjg1ODI4YzMiLCJmd1ZjSUQyQ29wcGEiOiI5MDEwZWQ0Mi00N2FkLTQ5MGItYmI3MC1iYjczNDk1MTQxODciLCJjdXN0b21QYXJhbXMiOnsiZm1zX2xpdmVyYW1wX2lkbCI6IiIsImZtc19lbWFpbGhhc2giOiJmMmU5NDljZTNkNTliMGUxNGFhYzg1MTE0Mjg2Mzg0OTQ5N2YwMzRiOGIyY2Y4NzhmMDBhMjRjN2Y4NTgyOGMzIiwiZm1zX3N1YnNjcmliZXJpZCI6IjY2ZGI1OGQ1ZjVkMGY4ODY3YzFkZTBkZCIsImZtc19pZmEiOiIiLCJmbXNfaWRmdiI6IiIsImZtc191c2VyaWQiOiI5MDEwZWQ0Mi00N2FkLTQ5MGItYmI3MC1iYjczNDk1MTQxODciLCJmbXNfdmNpZDJ0eXBlIjoiZW1haWxoYXNoIiwiZm1zX3JhbXBfaWQiOiIiLCJmbXNfaGhfcmFtcF9pZCI6IiIsImZtc19iaWRpZHR5cGUiOiIiLCJfZndfM1BfVUlEIjoiIiwiZm1zX3J1bGVpZCI6IjEwMDAwLDEwMDAzIn19LCJkcm0iOnsibmFtZSI6IndpZGV2aW5lIiwibGV2ZWwiOiJMMyJ9LCJpc3MiOiJib290LnBsdXRvLnR2Iiwic3ViIjoicHJpOnYxOnBsdXRvOnVzZXJzLXYxOlZFOk9UQXhNR1ZrTkRJdE5EZGhaQzAwT1RCaUxXSmlOekF0WW1JM016UTVOVEUwTVRnMzo2NmRiNThkNWY1ZDBmODg2N2MxZGUwZGQiLCJhdWQiOiIqLnBsdXRvLnR2IiwiZXhwIjoxNzI2MjUxNzMwLCJpYXQiOjE3MjYxNjUzMzAsImp0aSI6IjAxYjA1YjRmLTQ1YTMtNDI2Yi1iZjE1LTY5ODE2YmZiYjRkZCJ9.39rl2XvMQ_a-IvRKN-QimoS7aJVyhnX6R1LR2zu_j6o",
-    "origin": "https://pluto.tv",
-    "referer": "https://pluto.tv/",
-    "sec-ch-ua": '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": '"Windows"',
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-site",
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
-}
+headers_main_categories = {}
 
 # Headers para la API de subcategorías
-headers_sub_categories = {
-    "accept": "*/*",
-    "accept-encoding": "gzip, deflate, br, zstd",
-    "accept-language": "es-419,es;q=0.9",
-    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjFkODRkYzg4LTcxMWItNDBkNi1hN2M4LTRlZTFjOTY4YTE5YiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiJlYzMyYTZjZS03MTMzLTExZWYtOGM0OC1lYTM1MmM1Y2ZiZjMiLCJjbGllbnRJUCI6IjE2My4xMC4zNi40IiwiY2l0eSI6IkxhIFBsYXRhIiwicG9zdGFsQ29kZSI6ImIxOTA2IGZkYSIsImNvdW50cnkiOiJBUiIsImRtYSI6MCwiYWN0aXZlUmVnaW9uIjoiVkUiLCJkZXZpY2VMYXQiOi0zNC45MzAwMDAzMDUxNzU3OCwiZGV2aWNlTG9uIjotNTcuOTU5OTk5MDg0NDcyNjU2LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVzIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjguMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjQuMC05Y2E1MWNhMTBjMzA0N2ZiYWZhNzI5NzcwOGYxNDYyNDMxNDZkMTI1IiwiY2xpZW50SUQiOiI5MDEwZWQ0Mi00N2FkLTQ5MGItYmI3MC1iYjczNDk1MTQxODciLCJjbUF1ZGllbmNlSUQiOiIiLCJpc0NsaWVudEROVCI6ZmFsc2UsInVzZXJJRCI6IjY2ZGI1OGQ1ZjVkMGY4ODY3YzFkZTBkZCIsInVzZXJCcmFuZCI6InBsdXRvdHYiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvQXJnZW50aW5hL0J1ZW5vc19BaXJlcyIsInNlcnZlclNpZGVBZHMiOmZhbHNlLCJlMmVCZWFjb25zIjpmYWxzZSwiZmVhdHVyZXMiOnsibXVsdGlQb2RBZHMiOnsiZW5hYmxlZCI6dHJ1ZX19LCJlbnRpdGxlbWVudHMiOlsiUmVnaXN0ZXJlZCJdLCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6ImYyZTk0OWNlM2Q1OWIwZTE0YWFjODUxMTQyODYzODQ5NDk3ZjAzNGI4YjJjZjg3OGYwMGEyNGM3Zjg1ODI4YzMiLCJmd1ZjSUQyQ29wcGEiOiI5MDEwZWQ0Mi00N2FkLTQ5MGItYmI3MC1iYjczNDk1MTQxODciLCJjdXN0b21QYXJhbXMiOnsiZm1zX2xpdmVyYW1wX2lkbCI6IiIsImZtc19lbWFpbGhhc2giOiJmMmU5NDljZTNkNTliMGUxNGFhYzg1MTE0Mjg2Mzg0OTQ5N2YwMzRiOGIyY2Y4NzhmMDBhMjRjN2Y4NTgyOGMzIiwiZm1zX3N1YnNjcmliZXJpZCI6IjY2ZGI1OGQ1ZjVkMGY4ODY3YzFkZTBkZCIsImZtc19pZmEiOiIiLCJmbXNfaWRmdiI6IiIsImZtc191c2VyaWQiOiI5MDEwZWQ0Mi00N2FkLTQ5MGItYmI3MC1iYjczNDk1MTQxODciLCJmbXNfdmNpZDJ0eXBlIjoiZW1haWxoYXNoIiwiZm1zX3JhbXBfaWQiOiIiLCJmbXNfaGhfcmFtcF9pZCI6IiIsImZtc19iaWRpZHR5cGUiOiIiLCJfZndfM1BfVUlEIjoiIiwiZm1zX3J1bGVpZCI6IjEwMDAwLDEwMDAzIn19LCJkcm0iOnsibmFtZSI6IndpZGV2aW5lIiwibGV2ZWwiOiJMMyJ9LCJpc3MiOiJib290LnBsdXRvLnR2Iiwic3ViIjoicHJpOnYxOnBsdXRvOnVzZXJzLXYxOlZFOk9UQXhNR1ZrTkRJdE5EZGhaQzAwT1RCaUxXSmlOekF0WW1JM016UTVOVEUwTVRnMzo2NmRiNThkNWY1ZDBmODg2N2MxZGUwZGQiLCJhdWQiOiIqLnBsdXRvLnR2IiwiZXhwIjoxNzI2MjUxNzMwLCJpYXQiOjE3MjYxNjUzMzAsImp0aSI6IjAxYjA1YjRmLTQ1YTMtNDI2Yi1iZjE1LTY5ODE2YmZiYjRkZCJ9.39rl2XvMQ_a-IvRKN-QimoS7aJVyhnX6R1LR2zu_j6o",
-    "origin": "https://pluto.tv",
-    "referer": "https://pluto.tv/",
-    "sec-ch-ua": '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": '"Windows"',
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-site",
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
-}
+headers_sub_categories = {}
 
 # Obtener categorías principales
 response_main = requests.get(url_main_categories, headers=headers_main_categories)
